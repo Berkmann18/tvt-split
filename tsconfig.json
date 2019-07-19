@@ -1,0 +1,22 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "pretty": true,
+    "strict": true,
+    "target": "es6",
+    "lib": ["es2018"],
+    "removeComments": true,
+    "declaration": false,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+  },
+  "exclude": [
+    "test"
+  ],
+  "files": [
+    "./dist/index.d.ts"
+  ]
+}

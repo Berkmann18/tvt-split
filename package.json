@@ -1,28 +1,127 @@
 {
-  "name": "train-test-split",
-  "version": "1.0.0",
-  "description": "Randomly split an array of data into a train and test dataset.",
-  "main": "index.js",
+  "name": "tvt-split",
+  "version": "0.0.0",
+  "description": "Randomly split an array of data into a train, validation and test dataset.",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "jest"
+    "start": "node dist/index.js",
+    "start:ts": "ts-node src/index.ts",
+    "test": "jest",
+    "t:all": "snyk test && npm t",
+    "doc:lint": "documentation lint index.js",
+    "doc:html": "documentation build *.js -f html -o doc/ -a public",
+    "doc": "npm run doc:lint && npm run doc:html",
+    "lint:js": "eslint -c ./.eslintrc.json {*,src/}.ts --fix",
+    "com": "git-cz",
+    "lint:md": "remark . .github -i ./.remarkignore",
+    "lint": "npm run lint:js && npm run lint:md",
+    "semantic-release": "semantic-release",
+    "prepare": "snyk protect",
+    "fmt": "prettier --config .prettierrc.json --ignore-path .prettierignore --write",
+    "build": "tsc --build tsconfig.json",
+    "build:watch": "tsc --watch"
   },
   "keywords": [
     "machine",
     "learning",
     "test",
+    "validation",
     "train",
     "split"
   ],
-  "author": "Nick Scialli",
+  "author": {
+    "name": "Maximilian Berkmann",
+    "email": "maxieberkmann@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Berkmann18/tvt-split.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Berkmann18/tvt-split/issues"
+  },
+  "homepage": "https://github.com/Berkmann18/tvt-split#readme",
   "license": "MIT",
   "dependencies": {
     "seedrandom": "^2.4.4"
   },
   "devDependencies": {
-    "jest": "^24.1.0"
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/git": "^7.0.16",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.2",
+    "@types/seedrandom": "^2.4.28",
+    "@typescript-eslint/eslint-plugin": "^1.12.0",
+    "@typescript-eslint/parser": "^1.12.0",
+    "conventional-changelog-eslint": "^3.0.1",
+    "cz-adapter-eslint": "^0.3.0",
+    "documentation": "^12.0.0",
+    "eslint": "^6.0.1",
+    "eslint-plugin-jquery": "^1.5.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.5.0",
+    "husky": "^3.0.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.1.0",
+    "prettier": "^1.18.2",
+    "remark-cli": "^6.0.1",
+    "remark-preset-lint-consistent": "^2.0.3",
+    "remark-preset-lint-recommended": "^3.0.3",
+    "semantic-release": "^15.13.18",
+    "snyk": "^1.192.4",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 9"
+  ],
+  "lint-staged": {
+    "*.(j|t)s": [
+      "npm run fmt",
+      "eslint -c ./.eslintrc.json --fix",
+      "git add"
+    ],
+    "*.md": [
+      "remark",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">= 7.6.0",
+    "npm": ">= 5.6.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-adapter-eslint"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "jest": {
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "index.js",
+      "src/*.js",
+      "test/*.js",
+      "!**/node_modules/**",
+      "!**/_*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 90,
+        "lines": 50,
+        "statements": 50
+      }
+    },
+    "preset": "ts-jest",
+    "testEnvironment": "node"
   }
 }

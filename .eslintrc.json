@@ -1,0 +1,49 @@
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "plugins": [
+    "security",
+    "jquery",
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:security/recommended",
+    "plugin:you-dont-need-lodash-underscore/compatible",
+    "plugin:node/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/indent": "off",
+    "@typescript-eslint/no-non-null-assertion": "warn",
+    "indent": [
+      "error",
+      2
+    ],
+    "linebreak-style": [
+      "error"
+    ],
+    "no-console": "off",
+    "no-extra-semi": "off",
+    "prefer-const": "off",
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "no-trailing-spaces": [
+      "error"
+    ],
+    "node/no-unsupported-features/es-syntax": "off",
+    "symbol-description": [
+      "warn"
+    ]
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 9
+  }
+}
