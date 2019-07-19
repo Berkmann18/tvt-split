@@ -1,5 +1,11 @@
 import seedrandom from 'seedrandom';
 
+//@todo make use of validationSet
+//@todo refactor
+//@todo fix errors
+//@todo test
+//@todo publish
+
 const trainValidationTestSplit = (() => {
   const shuffle = (a: any[]) => {
     for (let i: number = a.length - 1; i > 0; i--) {
@@ -9,7 +15,7 @@ const trainValidationTestSplit = (() => {
     return a;
   };
 
-  return (data, train, seed = null, indices = false) => {
+  return (data, train, validation, seed = null, indices = false) => {
     let arr = [...data];
 
     if (seed !== null) Math.seedrandom(seed);
@@ -24,6 +30,7 @@ const trainValidationTestSplit = (() => {
 
     const shuffled = shuffle([...arr]);
     const testSet = shuffled.splice(0, arr.length - train);
+    const validationSet = shuffled.splice(0, arr.length - train - validation);
     const trainSet = shuffled;
 
     return [trainSet, validationSet, testSet];
