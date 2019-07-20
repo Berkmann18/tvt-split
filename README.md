@@ -1,5 +1,3 @@
-<!--![train-test-split](https://i.imgur.com/ttegOuC.png)-->
-
 [![Build Status](https://travis-ci.com/nas5w/train-test-split.svg?branch=master)](https://travis-ci.com/nas5w/train-test-split) [![Codecov Status](https://codecov.io/gh/nas5w/train-test-split/branch/master/graph/badge.svg)](https://codecov.io/gh/nas5w/train-test-split/branch/master)
 
 Split your dataset into training, validation and test datasets.
@@ -39,14 +37,14 @@ Returns **\[[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 ## Example usage
 
 ```javascript
-const trainTestSplit = require('train-test-split');
+const tvts = require('tvt-split');
 
 const arr = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
-const [train, test] = trainTestSplit(arr, 0.8, 1234);
-console.log(train, test);
-// [ 'one', 'seven', 'eight', 'ten', 'six', 'five', 'three', 'four' ] [ 'nine', 'two' ]
+const [train, validation, test] = tvts(arr, 0.8, .1, 1234);
+console.log(train, validation, test);
+// [ 'three', 'one', 'seven', 'eight', 'five', 'four', 'nine', 'six' ] [ 'two' ] [ 'ten' ]
 
-const [trainIndices, testIndices] = trainTestSplit(arr, 0.8, 1234, true);
-console.log(trainIndices, testIndices);
-// [ 0, 6, 7, 9, 5, 4, 2, 3 ] [ 8, 1 ]
+const [trainIndices, validationIndices, testIndices] = tvts(arr, 0.8, .1, 1234, true);
+console.log(trainIndices, validationIndices, testIndices);
+// [ 2, 0, 6, 7, 4, 3, 8, 5, ] [ 1 ] [ 9 ]
 ```
