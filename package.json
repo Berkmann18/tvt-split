@@ -10,7 +10,7 @@
     "t:all": "snyk test && npm t",
     "doc:lint": "documentation lint ./dist/index.js",
     "doc": "npm run doc:lint && documentation readme ./dist/index.js -s Documentation",
-    "lint:js": "eslint -c ./.eslintrc.json {*,src/}.ts --fix",
+    "lint:js": "eslint -c ./.eslintrc.json src/*.ts --fix",
     "com": "git-cz",
     "lint:md": "remark . .github -i ./.remarkignore",
     "lint": "npm run lint:js && npm run lint:md",
