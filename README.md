@@ -1,14 +1,15 @@
 [![Build Status](https://travis-ci.com/nas5w/train-test-split.svg?branch=master)](https://travis-ci.com/nas5w/train-test-split) [![Codecov Status](https://codecov.io/gh/nas5w/train-test-split/branch/master/graph/badge.svg)](https://codecov.io/gh/nas5w/train-test-split/branch/master)
 
 Split your dataset into training, validation and test datasets.
-\*\*This was largely inspired by [`train-test-split`](https://github.com/nas5w/train-test-split).
+
+**This was largely inspired by [`train-test-split`](https://github.com/nas5w/train-test-split).**
 
 ## Install
 
-Install using node package manager:
-
 ```bash
 npm install tvt-split
+#or with Yarn
+yarn add tvt-split
 ```
 
 ## Documentation
