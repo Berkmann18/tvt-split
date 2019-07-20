@@ -1,4 +1,29 @@
-[![Build Status](https://travis-ci.com/nas5w/train-test-split.svg?branch=master)](https://travis-ci.com/nas5w/train-test-split) [![Codecov Status](https://codecov.io/gh/nas5w/train-test-split/branch/master/graph/badge.svg)](https://codecov.io/gh/nas5w/train-test-split/branch/master)
+[![NPM](https://nodei.co/npm/tvt-split.png)](https://nodei.co/npm/tvt-split/)
+
+[![GitHub package version](https://img.shields.io/github/package-json/v/Berkmann18/tvt-split.svg)](https://github.com/Berkmann18/tvt-split)
+[![devDependencies Status](https://david-dm.org/berkmann18/tvt-split/dev-status.svg)](https://david-dm.org/berkmann18/tvt-split?type=dev)
+[![dependencies Status](https://david-dm.org/berkmann18/tvt-split/status.svg)](https://david-dm.org/berkmann18/tvt-split)
+
+[![GH Downloads](https://img.shields.io/github/downloads/Berkmann18/tvt-split/total.svg)](https://github.com/Berkmann18/tvt-split/network/members)
+[![GitHub commit activity the past year](https://img.shields.io/github/commit-activity/y/Berkmann18/tvt-split.svg)](https://github.com/Berkmann18/tvt-split/graphs/commit-activity)
+[![GitHub contributors](https://img.shields.io/github/contributors/Berkmann18/tvt-split.svg)](https://github.com/Berkmann18/tvt-split/graphs/contributors)
+[![Github search hit counter](https://img.shields.io/github/search/Berkmann18/tvt-split/goto.svg)](https://github.com/Berkmann18/tvt-split/graphs/traffic)
+
+[![Build Status](https://travis-ci.org/Berkmann18/tvt-split.svg?branch=master)](https://travis-ci.org/Berkmann18/tvt-split)
+[![codecov.io Code Coverage](https://img.shields.io/codecov/c/github/Berkmann18/tvt-split.svg?maxAge=2592000)](https://codecov.io/github/Berkmann18/tvt-split?branch=master)
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
+[![Known Vulnerabilities](https://snyk.io/test/github/Berkmann18/tvt-split/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Berkmann18/tvt-split?targetFile=package.json)
+
+[![GitHub](https://img.shields.io/github/license/Berkmann18/tvt-split.svg)](https://github.com/Berkmann18/tvt-split/blob/master/LICENSE)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Berkmann18/tvt-split/issues)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
+[![GitHub top language](https://img.shields.io/github/languages/top/Berkmann18/tvt-split.svg)](https://github.com/Berkmann18/tvt-split)
+[![GitHub language count](https://img.shields.io/github/languages/count/Berkmann18/tvt-split.svg)](https://github.com/Berkmann18/tvt-split)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Berkmann18/tvt-split.svg)](https://github.com/Berkmann18/tvt-split)
+
+[![BCH compliance](https://bettercodehub.com/edge/badge/Berkmann18/tvt-split?branch=master)](https://bettercodehub.com/results/Berkmann18/tvt-split)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2a8e3e98d3bb47f29abbc3df7174675d)](https://app.codacy.com/app/maxieberkmann/tvt-split?utm_source=github.com&utm_medium=referral&utm_content=Berkmann18/tvt-split&utm_campaign=Badge_Grade_Dashboard)
 
 Split your dataset into training, validation and test datasets.
 
