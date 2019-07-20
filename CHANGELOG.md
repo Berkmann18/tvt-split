@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/Berkmann18/tvt-split/compare/v1.0.1...v1.0.2) (2019-07-20)
+
+
+### Fix
+
+* Use `round` instead of `ceil` + more tests ([9a6dbeaad24bdd23beb4e0333982b1f1a9f0bdc2](https://github.com/Berkmann18/tvt-split/commit/9a6dbeaad24bdd23beb4e0333982b1f1a9f0bdc2))
+
 ## [1.0.1](https://github.com/Berkmann18/tvt-split/compare/v1.0.0...v1.0.1) (2019-07-20)
 
 
