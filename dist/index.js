@@ -23,8 +23,8 @@ const trainValidationTestSplit = (data, train, validation, seed = -1.1, indices 
     if (seed !== -1.1)
         RNG = new prando_1.default(seed);
     if (indices) {
-        let i = 0;
-        arr = arr.map(el => i++); //@todo Change this
+        //eslint-disable-next-line @typescript-eslint/no-unused-vars
+        arr = arr.map((el, i) => i);
     }
     // If train < 1, assume percentage (same thing for validation)
     if (train < 1)
