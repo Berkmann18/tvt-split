@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Berkmann18/tvt-split/compare/v1.0.0...v1.0.1) (2019-07-20)
+
+
+### Fix
+
+* Use CJS exports ([64d935688b701ec28baa89a91779a685c4ce3bf9](https://github.com/Berkmann18/tvt-split/commit/64d935688b701ec28baa89a91779a685c4ce3bf9))
+
 # 1.0.0 (2019-07-20)
 
 
