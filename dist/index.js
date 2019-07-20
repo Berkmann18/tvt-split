@@ -28,9 +28,9 @@ const trainValidationTestSplit = (data, train, validation, seed = -1.1, indices 
     }
     // If train < 1, assume percentage (same thing for validation)
     if (train < 1)
-        train = Math.ceil(train * arr.length);
+        train = Math.round(train * arr.length);
     if (validation < 1)
-        validation = Math.ceil(validation * arr.length);
+        validation = Math.round(validation * arr.length);
     const shuffled = shuffle([...arr]);
     const testSet = shuffled.splice(0, arr.length - train - validation);
     const validationSet = shuffled.splice(0, shuffled.length - train);

@@ -22,7 +22,7 @@ describe('1 split number', () => {
   });
 });
 
-describe('2 split numbers', () => {
+describe('even array: 2 split numbers', () => {
   const arr = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
   test('1 filled + 1 empty + 1 filled array', () => {
     const tvt = trainValidationTestSplit(arr, 0.8, 0);
@@ -41,6 +41,38 @@ describe('2 split numbers', () => {
 
   it('results in correct test array length', () => {
     expect(trainValidationTestSplit(arr, 0.8, 0.1)[2].length).toBe(1);
+  });
+
+  it('adds up', () => {
+    const t = trainValidationTestSplit(arr, 0.8, 0.1);
+    expect(t[0].length + t[1].length + t[2].length).toStrictEqual(arr.length);
+  });
+});
+
+describe('odd array: 2 split numbers', () => {
+  const arr = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+  test('1 filled + 1 empty + 1 filled array', () => {
+    const tvt = trainValidationTestSplit(arr, 0.7, 0.15);
+    expect(tvt.length).toBe(3);
+    expect(tvt[2].length > 0).toBeTruthy();
+    expect(tvt[1].length).toBe(1);
+  });
+
+  it('results in correct train array length', () => {
+    expect(trainValidationTestSplit(arr, 0.8, 0.1)[0].length).toBe(7);
+  });
+
+  it('results in correct validation array length', () => {
+    expect(trainValidationTestSplit(arr, 0.8, 0.1)[1].length).toBe(1);
+  });
+
+  it('results in correct test array length', () => {
+    expect(trainValidationTestSplit(arr, 0.8, 0.1)[2].length).toBe(1);
+  });
+
+  it('adds up', () => {
+    const t = trainValidationTestSplit(arr, 0.7, 0.15);
+    expect(t[0].length + t[1].length + t[2].length).toStrictEqual(arr.length);
   });
 });
 
