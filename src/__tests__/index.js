@@ -1,4 +1,4 @@
-const trainValidationTestSplit = require('../../dist/index').default;
+const trainValidationTestSplit = require('../../dist/index');
 
 describe('1 split number', () => {
   const arr = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];

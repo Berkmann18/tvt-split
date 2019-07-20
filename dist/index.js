@@ -37,4 +37,4 @@ const trainValidationTestSplit = (data, train, validation, seed = -1.1, indices 
     const trainSet = shuffled;
     return [trainSet, validationSet, testSet];
 };
-exports.default = trainValidationTestSplit;
+module.exports = trainValidationTestSplit;

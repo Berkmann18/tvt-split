@@ -47,4 +47,4 @@ const trainValidationTestSplit = (
   return [trainSet, validationSet, testSet];
 };
 
-export default trainValidationTestSplit;
+module.exports = trainValidationTestSplit;
