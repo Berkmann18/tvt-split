@@ -6,7 +6,7 @@
     "target": "es6",
     "lib": ["es2018"],
     "removeComments": true,
-    "declaration": false,
+    "declaration": true,
     "rootDir": "./src",
     "outDir": "./dist",
     "module": "commonjs",
@@ -14,9 +14,6 @@
     "strictNullChecks": true,
   },
   "exclude": [
-    "test"
-  ],
-  "files": [
-    "./dist/index.d.ts"
+    "__tests__"
   ]
 }

@@ -1,25 +1,29 @@
-import seedrandom from 'seedrandom';
+import Prando from 'prando';
 
-//@todo fix errors
-//@todo test
-//@todo publish
+let RNG = new Prando();
 
 const shuffle = (a: any[]) => {
   for (let i: number = a.length - 1; i > 0; i--) {
-    const j: number = Math.floor(Math.random() * (i + 1));
+    const j: number = Math.floor(RNG.next() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
 };
 
-const trainValidationTestSplit = (data: any[], train: number, validation: number, seed = null, indices = false) => {
+const trainValidationTestSplit = (
+  data: any[],
+  train: number,
+  validation: number,
+  seed: number = -1.1,
+  indices = false
+) => {
   let arr = [...data];
 
-  if (seed !== null) Math.seedrandom(seed);
+  if (seed !== -1.1) RNG = new Prando(seed);
 
   if (indices) {
     let i = 0;
-    arr = arr.map(el => i++);
+    arr = arr.map(el => i++); //@todo Change this
   }
 
   // If train < 1, assume percentage (same thing for validation)
