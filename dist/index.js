@@ -9,14 +9,24 @@ const shuffle = (a) => {
     }
     return a;
 };
+/**
+ * Split data into a training, validation and test set.
+ * @param {Array} data Data
+ * @param {number} train Size of the training set (in percentage if `train < 1`)
+ * @param {number} validation Size of the validation set (in percentage if `train < 1`)
+ * @param {number} [seed=-1.1] Seed of the Pseudo-Random Number Generation.
+ * @param {boolean} [indices=false] Indicates whether to return the indices of the provided array or the actual values
+ * @returns {[Array, Array, Array]} Split data
+ */
 const trainValidationTestSplit = (data, train, validation, seed = -1.1, indices = false) => {
     let arr = [...data];
     if (seed !== -1.1)
         RNG = new prando_1.default(seed);
     if (indices) {
         let i = 0;
-        arr = arr.map(el => i++);
+        arr = arr.map(el => i++); //@todo Change this
     }
+    // If train < 1, assume percentage (same thing for validation)
     if (train < 1)
         train = Math.ceil(train * arr.length);
     if (validation < 1)

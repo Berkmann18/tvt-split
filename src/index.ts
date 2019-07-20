@@ -10,6 +10,15 @@ const shuffle = (a: any[]) => {
   return a;
 };
 
+/**
+ * Split data into a training, validation and test set.
+ * @param {Array} data Data
+ * @param {number} train Size of the training set (in percentage if `train < 1`)
+ * @param {number} validation Size of the validation set (in percentage if `train < 1`)
+ * @param {number} [seed=-1.1] Seed of the Pseudo-Random Number Generation.
+ * @param {boolean} [indices=false] Indicates whether to return the indices of the provided array or the actual values
+ * @returns {[Array, Array, Array]} Split data
+ */
 const trainValidationTestSplit = (
   data: any[],
   train: number,
