@@ -1,3 +1,14 @@
+## [1.0.3](https://github.com/Berkmann18/tvt-split/compare/v1.0.2...v1.0.3) (2020-04-04)
+
+
+### Chore
+
+* Added an IssueLabelBot configuration ([abc3c516252247569795591f96f47c02b87718d5](https://github.com/Berkmann18/tvt-split/commit/abc3c516252247569795591f96f47c02b87718d5))
+
+### Fix
+
+* Vulnerability fix ([a2c5061adde451784f884462eb3a59fffd56001e](https://github.com/Berkmann18/tvt-split/commit/a2c5061adde451784f884462eb3a59fffd56001e))
+
 ## [1.0.2](https://github.com/Berkmann18/tvt-split/compare/v1.0.1...v1.0.2) (2019-07-20)
 
 
