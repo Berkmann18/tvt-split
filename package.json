@@ -42,7 +42,7 @@
   "homepage": "https://github.com/Berkmann18/tvt-split#readme",
   "license": "MIT",
   "dependencies": {
-    "prando": "^5.1.1"
+    "prando": "^5.1.2"
   },
   "optionalDependencies": {
     "mem": "^4.0.0",
